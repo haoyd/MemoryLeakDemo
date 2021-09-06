@@ -11,6 +11,8 @@ class MainActivity : BaseActivity(), AdapterView.OnItemClickListener {
     private val pages = listOf(
         "handler内存泄露 - 问题",
         "handler内存泄露 - 解决",
+        "注册对象未注销 - 问题",
+        "注册对象未注销 - 解决",
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +31,12 @@ class MainActivity : BaseActivity(), AdapterView.OnItemClickListener {
             }
             1 -> {
                 startPage(HandlerLeakSolveActivity::class.java, title)
+            }
+            2 -> {
+                startPage(ObserverLeakActivity::class.java, title)
+            }
+            3 -> {
+                startPage(ObserverLeakSolveActivity::class.java, title)
             }
         }
 
