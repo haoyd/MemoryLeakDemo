@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MemoryLeakDemo">
         <activity
+            android:name=".StaticLeakSolveActivity"
+            android:exported="true" />
+        <activity
+            android:name=".StaticLeakActivity"
+            android:exported="true" />
+        <activity
             android:name=".ObserverLeakSolveActivity"
             android:exported="true" />
         <activity

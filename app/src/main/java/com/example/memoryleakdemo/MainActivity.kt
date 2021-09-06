@@ -13,6 +13,8 @@ class MainActivity : BaseActivity(), AdapterView.OnItemClickListener {
         "handler内存泄露 - 解决",
         "注册对象未注销 - 问题",
         "注册对象未注销 - 解决",
+        "对象被静态变量持有 - 问题",
+        "对象被静态变量持有 - 解决",
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +39,12 @@ class MainActivity : BaseActivity(), AdapterView.OnItemClickListener {
             }
             3 -> {
                 startPage(ObserverLeakSolveActivity::class.java, title)
+            }
+            4 -> {
+                startPage(StaticLeakActivity::class.java, title)
+            }
+            5 -> {
+                startPage(StaticLeakSolveActivity::class.java, title)
             }
         }
 
