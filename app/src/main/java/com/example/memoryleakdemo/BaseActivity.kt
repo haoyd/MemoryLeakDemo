@@ -7,8 +7,12 @@ import androidx.appcompat.app.AppCompatActivity
 
 open class BaseActivity : AppCompatActivity() {
 
+    protected lateinit var tag: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        tag = localClassName
 
         val title = intent?.getStringExtra("title")
         if (!TextUtils.isEmpty(title)) {

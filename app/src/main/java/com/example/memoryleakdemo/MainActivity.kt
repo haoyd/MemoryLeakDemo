@@ -1,6 +1,5 @@
 package com.example.memoryleakdemo
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
@@ -10,7 +9,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : BaseActivity(), AdapterView.OnItemClickListener {
 
     private val pages = listOf(
-        "handler造成内存泄露",
+        "handler内存泄露 - 问题",
+        "handler内存泄露 - 解决",
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +25,10 @@ class MainActivity : BaseActivity(), AdapterView.OnItemClickListener {
         val title = pages[position]
         when (position) {
             0 -> {
+                startPage(HandlerLeakActivity::class.java, title)
+            }
+            1 -> {
+                startPage(HandlerLeakSolveActivity::class.java, title)
             }
         }
 

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MemoryLeakDemo">
         <activity
+            android:name=".HandlerLeakSolveActivity"
+            android:exported="true" />
+        <activity
+            android:name=".HandlerLeakActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
