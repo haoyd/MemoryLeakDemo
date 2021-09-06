@@ -15,6 +15,8 @@ class MainActivity : BaseActivity(), AdapterView.OnItemClickListener {
         "注册对象未注销 - 解决",
         "对象被静态变量持有 - 问题",
         "对象被静态变量持有 - 解决",
+        "非静态内部类的静态实例 - 问题",
+        "非静态内部类的静态实例 - 解决",
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,6 +48,13 @@ class MainActivity : BaseActivity(), AdapterView.OnItemClickListener {
             5 -> {
                 startPage(StaticLeakSolveActivity::class.java, title)
             }
+            6 -> {
+                startPage(InnerClassLeakActivity::class.java, title)
+            }
+            7 -> {
+                startPage(InnerClassLeakSolveActivity::class.java, title)
+            }
+
         }
 
     }
