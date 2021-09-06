@@ -7,7 +7,7 @@ import android.content.IntentFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class ObserverLeakSolveActivity : AppCompatActivity() {
+class ObserverLeakSolveActivity : BaseActivity() {
 
     private val br = object : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
