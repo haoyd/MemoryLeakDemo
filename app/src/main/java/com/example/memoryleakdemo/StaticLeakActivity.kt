@@ -6,10 +6,12 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 
-@SuppressLint("StaticFieldLeak")
-var mContext: Context? = null
-
 class StaticLeakActivity : BaseActivity() {
+
+    companion object {
+        var mContext: Context? = null
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_static_leak)
